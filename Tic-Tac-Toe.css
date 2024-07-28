@@ -21,6 +21,12 @@ h1 {
 	text-align: center;
 	margin: 10px 0;
 }
+svg {
+	position: absolute;
+	pointer-events: none;
+	width: inherit;
+	height: inherit;
+}
 .button-row {
 	display: flex;
 	justify-content: center;
