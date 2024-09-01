@@ -6,29 +6,43 @@
 	<link rel="stylesheet" href="Tic-Tac-Toe.css">
 </head>
 <body>
-		<header>
-			<div class="button-row">
-				<button onclick="reset()">Reset</button>
-				<button onclick="start('x')">X First</button>
-				<button onclick="start('o')">O First</button>
-				<button onclick="start('r')">Random</button>
-			</div>
-			<h1>No one's turn</h1>
-		</header> 
-			<div class="board">
-				<svg xmlns="http://www.w3.org/2000/svg">
+	<div class="darken">
+		<div class="confetti-container" style="left: 0;">
+			<svg class="cone" xmlns="http://www.w3.org/2000/svg">
+				<polygon points="30,0 125,250 220,0" style="fill: orange; stroke: red; stroke-width: 5;" />
+			</svg>
+		</div>
 
-				</svg>
-				<div class="box" id="0"></div>
-				<div class="box" id="1"></div>
-				<div class="box" id="2"></div>
-				<div class="box" id="3"></div>
-				<div class="box" id="4"></div>
-				<div class="box" id="5"></div>
-				<div class="box" id="6"></div>
-				<div class="box" id="7"></div>
-				<div class="box" id="8"></div>
-			</div>
+		<div id="alert-box"></div>
+
+		<div class="confetti-container" style="right: 0; transform: rotateY(180deg);">
+			<svg class="cone" xmlns="http://www.w3.org/2000/svg">
+				<polygon points="30,0 125,250 220,0" style="fill: orange; stroke: red; stroke-width: 5;" />
+			</svg>
+		</div>
+	</div>
+	<header>
+		<div class="button-row">
+			<button onclick="reset()">Reset</button>
+			<button onclick="start('x')">X First</button>
+			<button onclick="start('o')">O First</button>
+			<button onclick="start('r')">Random</button>
+		</div>
+		<h1>No one's turn</h1>
+	</header> 
+	<div class="board">
+		<svg xmlns="http://www.w3.org/2000/svg" id="winLine"></svg>
+		<div class="box" id="0"></div>
+		<div class="box" id="1"></div>
+		<div class="box" id="2"></div>
+		<div class="box" id="3"></div>
+		<div class="box" id="4"></div>
+		<div class="box" id="5"></div>
+		<div class="box" id="6"></div>
+		<div class="box" id="7"></div>
+		<div class="box" id="8"></div>
+	</div>
 	<script src="tictactoeScript.js"></script>
+	<script src="confettiScript.js"></script>
 </body>
 </html>
